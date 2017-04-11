@@ -22,5 +22,5 @@
         "psr-4": {
             "Secrethash\\Dropmenu\\": "src/"
         }
-    },
+    }
 }
