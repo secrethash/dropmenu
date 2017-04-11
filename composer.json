@@ -1,0 +1,26 @@
+{
+    "name": "secrethash/dropmenu",
+    "description": "A Simple Menu Generator from Database.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shashwat Mishra",
+            "email": "secrethash96@gmail.com"
+        }
+    ],
+    "require": {
+        "secrethash/trickster": "^1.2",
+        "illuminate/console": "~5.0",
+        "illuminate/support": "~5.0",
+        "illuminate/cache": "~5.0"
+    },
+    "autoload": {
+        "classmap": [
+            "src/commands"
+        ],
+        "psr-4": {
+            "Secrethash\\Dropmenu\\": "src/"
+        }
+    },
+}
