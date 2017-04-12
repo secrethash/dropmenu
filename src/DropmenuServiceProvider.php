@@ -4,7 +4,7 @@ namespace Secrethash\Dropmenu;
 
 use Illuminate\Support\ServiceProvider;
 
-class MenuServiceProvider extends ServiceProvider
+class DropmenuServiceProvider extends ServiceProvider
 {
     /**
      * Bootstrap the application services.
@@ -20,7 +20,7 @@ class MenuServiceProvider extends ServiceProvider
         // $this->mergeConfigFrom($configPath, 'trickster');
 
         // Registers Commands
-        $this->commands('command.secrethash.migration');
+        $this->commands('command.dropmenu.migration');
     }
 
     /**
@@ -30,16 +30,42 @@ class MenuServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make('Secrethash\Dropmenu\Menu');
-
+        $this->app->make('Secrethash\Dropmenu\Dropmenu');
+        
+        $this->registerCommands();
+        
         $this->bindFacade();
 
     }
 
     private function bindFacade() {
-        $this->app->bind('menu', function($app) {
+        $this->app->bind('dropmenu', function($app) {
             return new Dropmenu();
         });
     }
 
+
+    /**
+     * Register the artisan commands.
+     *
+     * @return void
+     */
+    private function registerCommands()
+    {
+        $this->app->singleton('command.dropmenu.migration', function ($app) {
+            return new MigrationCommand();
+        });
+    }
+
+    /**
+     * Get the services provided.
+     *
+     * @return array
+     */
+    public function provides()
+    {
+        return [
+            'command.dropmenu.migration'
+        ];
+    }
 }

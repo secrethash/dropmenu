@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class SecrethashMenusTables extends Migration
+class SecrethashDropmenuTables extends Migration
 {
     /**
      * Run the migrations.

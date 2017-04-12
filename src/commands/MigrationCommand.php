@@ -27,7 +27,7 @@ class MigrationCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Creates a migration following the Secrethash\'s DropMenu specifications.';
+    protected $description = 'Creates a migration for Database following the Secrethash\'s DropMenu specifications.';
 
     /**
      * Execute the console command.
@@ -43,7 +43,7 @@ class MigrationCommand extends Command
         $this->info( "Table(s): menus" );
 
         $message = "A migration that creates 'menus'".
-        " table will be created in database/migrations directory";
+        " table. Migration file will be created in database/migrations directory";
 
         $this->comment($message);
         $this->line('');
@@ -56,6 +56,14 @@ class MigrationCommand extends Command
             if ($this->createMigration()) {
 
                 $this->info("Migration successfully created!");
+                $this->line('');
+                $this->info('Now Run Command:');
+                $this->line('');
+                $this->info('          php artisan migrate');
+                $this->line('');
+                $this->info("to start the Migration of the 'menus' table");
+                $this->line('');
+                $this->info('P E A C E   O U T  ! ! !');
             } else {
                 $this->error(
                     "Couldn't create migration.\n Check the write permissions".
@@ -77,7 +85,7 @@ class MigrationCommand extends Command
      */
     protected function createMigration()
     {
-        $migrationFile = base_path("/database/migrations")."/".date('Y_m_d_His')."_secrethash_menus_tables.php";
+        $migrationFile = base_path("/database/migrations")."/".date('Y_m_d_His')."_secrethash_dropmenu_tables.php";
 
         $output = $this->laravel->view->make('dropmenu::generators.migration')->render();
 

@@ -2,12 +2,12 @@
 
 namespace Secrethash\Dropmenu;
 
-use Secrethash\Dropmenu\Model\Menu;
+use Secrethash\Dropmenu\Model\Menu as Menu;
 use Auth;
 use URL;
 use Trickster;
 
-class Menu {
+class Dropmenu {
     // Icon Settings
     var $icon_suf = '';
     var $icon_pre = '';

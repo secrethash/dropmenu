@@ -10,7 +10,7 @@
 
 use Illuminate\Support\Facades\Facade;
 
-class MenuFacade extends Facade
+class DropmenuFacade extends Facade
 {
     /**
      * Get the registered name of the component.
