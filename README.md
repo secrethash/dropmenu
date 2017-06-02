@@ -1,37 +1,58 @@
-## Welcome to GitHub Pages
+DropMenu - Drop Down Menu
+=======
+-
+**DropMenu** is a Database driven Drop Down Menu Package for ***Laravel 5+***. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it's an opensource project you are free to play around with.
+-
 
-You can use the [editor on GitHub](https://github.com/secrethash/dropmenu/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+> *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+---
+# Installation
+For a Stable Release:
 ```
+composer require secrethash/dropmenu
+```
+For the Development Version:
+```
+composer require secrethash/dropmenu:dev-master
+```
+---
+#Migration
+###Generation
+You can generate migration to migrate the database. The migration will create a ***'menu'*** class following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
+```haskell
+php artisan dropdown:migrate
+```
+###Migrate
+The above command creates the migration file in `database\migrations` directory. From there you will need to migrate using the `migrate` command.
+```haskell
+php artisan migrate
+```
+Once the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+---
+**AGAIN:**
+> *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
-### Jekyll Themes
+#Clearing Some Basics
+Some basics needs to be cleared out before you work on/with this package.
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/secrethash/dropmenu/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+- It Creates Bootstarp menus.
+- Dynamic Drop Down Menus can be created using it.
+- Database Table `menus`:
+	- `ID` The unique identifier.
+	- `parent_id`Defined if a sub-menu is created. `ID` of the parent menu item will be defined.
+	- `name` Name to display.
+	- `order_by` Comes handy when creating multiple menu items of same hierarchy level.
+	- `link` Value supplied to the `<a href="">` of the menu item.
+	- `link_attr` Any extra Attributes of the Link. Like `target="_blank"`.
+	- `icon` Icon Class Code supplied to the `<i class="">`. If using font-awesome, use full class code that is to be provided in `<i>`, like `fa fa-code`.
+	- `type` It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.
+	- `auth`Authentication Level can be defined here. Here `1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups`
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+#Displaying the Menu
+The menu can be displayed by using the following function:
+```php
+Dropmenu::display($type);
+```
+The `$type` is the type provided in the `type` column in the database table.

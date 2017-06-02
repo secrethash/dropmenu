@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DropMenu</title>
+<link rel="stylesheet" href="https://stackedit.io/res-min/themes/base.css" />
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body><div class="container"><h1 id="dropmenu-drop-down-menu">DropMenu - Drop Down Menu</h1>
+
+<p>-</p>
+
+<h2 id="dropmenu-is-a-database-driven-drop-down-menu-package-for-laravel-5-dropmenu-is-currently-under-development-and-that-is-the-main-reason-that-full-documentation-is-not-yet-provided-but-as-its-an-opensource-project-you-are-free-to-play-around-with"><strong>DropMenu</strong> is a Database driven Drop Down Menu Package for <strong><em>Laravel 5+</em></strong>. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it’s an opensource project you are free to play around with.</h2>
+
+<blockquote>
+  <p><em>FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  <strong>FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.</strong>. I’ll be glad to answer them.</em></p>
+</blockquote>
+
+<hr>
+
+<h1 id="installation">Installation</h1>
+
+<p>For a Stable Release:</p>
+
+<pre class="prettyprint"><code class=" hljs ruby">composer <span class="hljs-keyword">require</span> secrethash/dropmenu</code></pre>
+
+<p>For the Development Version:</p>
+
+<pre class="prettyprint"><code class=" hljs lasso">composer <span class="hljs-keyword">require</span> secrethash/dropmenu:dev<span class="hljs-attribute">-master</span></code></pre>
+
+<hr>
+
+<h1 id="migration">Migration</h1>
+
+
+
+<h3 id="generation">Generation</h3>
+
+<p>You can generate migration to migrate the database. The migration will create a <strong><em>‘menu’</em></strong> class following the structure requirements of <code>secrethash/dropmenu</code>. The command for creating the migration file is:</p>
+
+
+
+<pre class="prettyprint"><code class="language-haskell hljs "><span class="hljs-title">php</span> artisan dropdown:migrate</code></pre>
+
+<h3 id="migrate">Migrate</h3>
+
+<p>The above command creates the migration file in <code>database\migrations</code> directory. From there you will need to migrate using the <code>migrate</code> command.</p>
+
+
+
+<pre class="prettyprint"><code class="language-haskell hljs "><span class="hljs-title">php</span> artisan migrate</code></pre>
+
+<p>Once the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.</p>
+
+<hr>
+
+<p><strong>AGAIN:</strong></p>
+
+<blockquote>
+  <p><em>FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  <strong>FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.</strong>. I’ll be glad to answer them.</em></p>
+</blockquote>
+
+
+
+<h1 id="clearing-some-basics">Clearing Some Basics</h1>
+
+<p>Some basics needs to be cleared out before you work on/with this package.</p>
+
+<ul>
+<li>It Creates Bootstarp menus.</li>
+<li>Dynamic Drop Down Menus can be created using it.</li>
+<li>Database Table <code>menus</code>: <br>
+<ul><li><code>ID</code> The unique identifier.</li>
+<li><code>parent_id</code>Defined if a sub-menu is created. <code>ID</code> of the parent menu item will be defined.</li>
+<li><code>name</code> Name to display.</li>
+<li><code>order_by</code> Comes handy when creating multiple menu items of same hierarchy level.</li>
+<li><code>link</code> Value supplied to the <code>&lt;a href=""&gt;</code> of the menu item.</li>
+<li><code>link_attr</code> Any extra Attributes of the Link. Like <code>target="_blank"</code>.</li>
+<li><code>icon</code> Icon Class Code supplied to the <code>&lt;i class=""&gt;</code>. If using font-awesome, use full class code that is to be provided in <code>&lt;i&gt;</code>, like <code>fa fa-code</code>.</li>
+<li><code>type</code> It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.</li>
+<li><code>auth</code>Authentication Level can be defined here. Here <code>1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups</code></li></ul></li>
+</ul>
+
+
+
+<h1 id="displaying-the-menu">Displaying the Menu</h1>
+
+<p>The menu can be displayed by using the following function:</p>
+
+
+
+<pre class="prettyprint"><code class="language-php hljs ">Dropmenu::display(<span class="hljs-variable">$type</span>);</code></pre>
+
+<p>The <code>$type</code> is the type provided in the <code>type</code> column in the database table.</p></div></body>
+</html>
