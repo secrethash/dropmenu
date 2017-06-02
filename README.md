@@ -1,7 +1,7 @@
 DropMenu - Drop Down Menu
 =======
-**DropMenu** is a Database driven Drop Down Menu Package for ***Laravel 5+***. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it's an opensource project you are free to play around with.
--
+
+**DropMenu** is a Database driven, Dynamic Drop Down Menu Package for ***Laravel 5+***. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it's an opensource project you are free to contribute.
 
 > *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
@@ -18,7 +18,7 @@ composer require secrethash/dropmenu:dev-master
 ---
 # Migration
 ### Generation
-You can generate migration to migrate the database. The migration will create a ***'menu'*** class following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
+You can generate migration to migrate the database. The migration will create a ***'menus'*** database following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
 ```haskell
 php artisan dropdown:migrate
 ```
@@ -40,7 +40,7 @@ Some basics needs to be cleared out before you work on/with this package.
 - Dynamic Drop Down Menus can be created using it.
 - Database Table `menus`:
 	- `ID` The unique identifier.
-	- `parent_id`Defined if a sub-menu is created. `ID` of the parent menu item will be defined.
+	- `parent_id`It will be defined if a sub-menu is created. `ID` of the parent menu item will be the value here.
 	- `name` Name to display.
 	- `order_by` Comes handy when creating multiple menu items of same hierarchy level.
 	- `link` Value supplied to the `<a href="">` of the menu item.
@@ -54,4 +54,4 @@ The menu can be displayed by using the following function:
 ```php
 Dropmenu::display($type);
 ```
-The `$type` is the type provided in the `type` column in the database table.
+The `$type` is the value provided in the `type` column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.
