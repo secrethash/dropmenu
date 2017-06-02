@@ -1,6 +1,5 @@
 DropMenu - Drop Down Menu
 =======
--
 **DropMenu** is a Database driven Drop Down Menu Package for ***Laravel 5+***. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it's an opensource project you are free to play around with.
 -
 
@@ -17,13 +16,13 @@ For the Development Version:
 composer require secrethash/dropmenu:dev-master
 ```
 ---
-#Migration
-###Generation
+# Migration
+### Generation
 You can generate migration to migrate the database. The migration will create a ***'menu'*** class following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
 ```haskell
 php artisan dropdown:migrate
 ```
-###Migrate
+### Migrate
 The above command creates the migration file in `database\migrations` directory. From there you will need to migrate using the `migrate` command.
 ```haskell
 php artisan migrate
@@ -34,7 +33,7 @@ Once the migration is completed, you are ready to seed your database with the me
 **AGAIN:**
 > *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
-#Clearing Some Basics
+# Clearing Some Basics
 Some basics needs to be cleared out before you work on/with this package.
 
 - It Creates Bootstarp menus.
@@ -50,7 +49,7 @@ Some basics needs to be cleared out before you work on/with this package.
 	- `type` It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.
 	- `auth`Authentication Level can be defined here. Here `1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups`
 
-#Displaying the Menu
+# Displaying the Menu
 The menu can be displayed by using the following function:
 ```php
 Dropmenu::display($type);
