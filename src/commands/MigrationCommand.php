@@ -57,9 +57,9 @@ class MigrationCommand extends Command
 
                 $this->info("Migration successfully created!");
                 $this->line('');
-                $this->info('Now Run Command:');
+                $this->info('(!)Further: Now Run Command:');
                 $this->line('');
-                $this->info('          php artisan migrate');
+                $this->info('> php artisan migrate');
                 $this->line('');
                 $this->info("to start the Migration of the 'menus' table");
                 $this->line('');
