@@ -151,5 +151,6 @@ class Dropmenu {
         $menu = $this->render($arrayMenu);
         $this->iconSettings("<i class='", "'></i> ", "<!--#-->");
 
+        return $menu;
     }
 }
