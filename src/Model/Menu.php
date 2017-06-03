@@ -1,6 +1,6 @@
 <?php
 
-namespace Secrethash\Menu;
+namespace Secrethash\Dropmenu\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
