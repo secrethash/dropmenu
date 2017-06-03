@@ -17,7 +17,8 @@
     },
     "autoload": {
         "classmap": [
-            "src/commands"
+            "src/commands",
+            "src/Model"
         ],
         "psr-4": {
             "Secrethash\\Dropmenu\\": "src/"
