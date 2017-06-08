@@ -5,7 +5,7 @@ namespace Secrethash\Dropmenu;
 use Secrethash\Dropmenu\Model\Menu as Menu;
 use Auth;
 use URL;
-use Trickster;
+use Secrethash\Trickster;
 
 class Dropmenu {
     // Icon Settings
@@ -20,7 +20,7 @@ class Dropmenu {
     */
     protected $user = '';
 
-    public function users()
+    protected function users()
     {
         if (Auth::check())
         {
@@ -35,7 +35,7 @@ class Dropmenu {
     * @return Icon Settings
     */
 
-    public function iconSettings($icon_pre, $icon_suf, $full_suf)
+    protected function iconSettings($icon_pre, $icon_suf, $full_suf)
     {
         if (!empty($icon_pre))
         {
@@ -57,7 +57,7 @@ class Dropmenu {
     * @var render
     * @return HTML Menu
     */
-    public function render($array, $parent_id=0, $parents=array())
+    protected function render($array, $parent_id=0, $parents=array())
     {
 
         if (Auth::check())
@@ -118,7 +118,7 @@ class Dropmenu {
                 if(in_array($element['id'], $parents))
                 {
                     $menu_html .= "\n\t<ul>\n";
-                    $menu_html .= $this->create_html($array, $element['id'], $parents);
+                    $menu_html .= $this->render($array, $element['id'], $parents);
                     $menu_html .= "\n\t</ul>\n";
                 }
                 $menu_html .= "</li>";
