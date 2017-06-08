@@ -1,11 +1,14 @@
 DropMenu - Drop Down Menu
 =======
 
-**DropMenu** is a Database driven, Dynamic Drop Down Menu Package for ***Laravel 5+***. DropMenu is Currently under development and that is the main reason that full documentation is not yet provided. But as it's an opensource project you are free to contribute.
+**DropMenu** is a Database driven, Dynamic Drop Down Menu Package for ***Laravel 5+*** . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.
+
+We are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)
 
 > *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
 ---
+
 # Installation
 For a Stable Release:
 ```
@@ -15,12 +18,34 @@ For the Development Version:
 ```
 composer require secrethash/dropmenu:dev-master
 ```
+
 ---
+
+# Configurations
+You will need to update you `config\app.php` file to make it work.
+
+### Service Provider
+Add the below line in your `providers` array
+
+```php
+        Secrethash\Dropmenu\DropmenuServiceProvider::class,
+```
+
+### Facade
+To access Dropmenu using `Dropmenu` facade instead of `Secrethash\Dropmenu`, you will need to update the `aliases` array.
+Add the below line in the `aliases` array:
+
+```php
+        'Dropmenu' => Secrethash\Dropmenu\DropmenuFacade::class,
+```
+
+---
+
 # Migration
 ### Generation
 You can generate migration to migrate the database. The migration will create a ***'menus'*** database following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
 ```haskell
-php artisan dropdown:migrate
+php artisan dropmenu:migrate
 ```
 ### Migrate
 The above command creates the migration file in `database\migrations` directory. From there you will need to migrate using the `migrate` command.
@@ -30,6 +55,7 @@ php artisan migrate
 Once the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.
 
 ---
+
 **AGAIN:**
 > *FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  **FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.**. I'll be glad to answer them.*
 
