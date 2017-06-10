@@ -1,7 +1,7 @@
 DropMenu - Drop Down Menu
 =======
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/secrethash/dropmenu/master/LICENSE) [![Travis](https://img.shields.io/travis/secrethash/dropmenu.svg?style=flat-square)](https://github.com/secrethash/dropmenu) [![Packagist](https://img.shields.io/packagist/dt/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu) [![Packagist](https://img.shields.io/packagist/v/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu) [![GitHub release](https://img.shields.io/github/release/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://raw.githubusercontent.com/secrethash/dropmenu/master/LICENSE) [![Packagist](https://img.shields.io/packagist/dt/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu) [![Packagist](https://img.shields.io/packagist/v/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu) [![GitHub release](https://img.shields.io/github/release/secrethash/dropmenu.svg?style=flat-square)](https://packagist.org/packages/secrethash/dropmenu)
 
 ***Socialize:***
 
