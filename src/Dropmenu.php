@@ -169,7 +169,7 @@ class Dropmenu {
                     }
                 }
 
-                $href = ($element['link'])!=NULL ? "href='".$link."' ");
+                $href = ($element['link'])!=NULL ? "href='".$link."' " : "");
 
                 $menu_html .= "\n<li><a ".$href.$element['link_attr'].">".$icon_pre.$element['icon'].$icon_suf."".$element['name'].$full_suf."</a>";
                 if(in_array($element['id'], $parents))
