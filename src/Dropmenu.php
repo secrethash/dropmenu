@@ -169,7 +169,9 @@ class Dropmenu {
                     }
                 }
 
-                $menu_html .= "\n<li><a ".($element['link'])!=NULL ? "href='".$link."' ").$element['link_attr'].">".$icon_pre.$element['icon'].$icon_suf."".$element['name'].$full_suf."</a>";
+                $href = ($element['link'])!=NULL ? "href='".$link."' ");
+
+                $menu_html .= "\n<li><a ".$href.$element['link_attr'].">".$icon_pre.$element['icon'].$icon_suf."".$element['name'].$full_suf."</a>";
                 if(in_array($element['id'], $parents))
                 {
                     $menu_html .= "\n\t<ul ".$this->childULA.">\n";
