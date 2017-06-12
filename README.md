@@ -87,3 +87,52 @@ The menu can be displayed by using the following function:
 Dropmenu::display($type);
 ```
 The `$type` is the value provided in the `type` column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.
+
+# Settings Explained
+Settings are new to Dropmenu released after `1.5.0+`. Settings give an enhancement for customizing and supporting of the dropdown menu with maximum number of themes.
+> Settings can be injected, if mandatory, using `Dropmenu::display($type, $iconSettingArray, $childSettingArray)`, the second and third parameters.
+## Available Options
+### Icon Settings
+These settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:
+- ***prefix***: *Prefix is the starting element that are provided before the value of the `icon` table. By Default it is set to `<i class='`. Further the HTML is completed by the *Suffix*. It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to: `<div class="someThing"><i class="`.*
+- ***suffix***: *To complete the HTML Suffix should be provided. Following the above example, the suffix will be: `"></i>`.*
+- ***line_end***: *Following the example, Line End to play when you need to end the `</div>` element after the Link text ends, else it can be left blank and the `div` can be ended in the suffix.*
+### Child Settings
+Child Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example `class="" id=""`.
+- ***ul_attributes***
+## Injecting
+Settings can be injected using the same `display()` function of `Dropmenu`.
+```php
+	// Icon Settings
+	$icon['prefix'] = '<div id="navElement1"><i id="someThing" class="';
+	$icon['suffix'] = '"></i>';
+	$icon['line_end'] = '</div>';
+	
+	// Child Settings
+	$child['ul_attributes'] = 'class="nav nav_child"';
+	
+	Dropmenu::display('admin:nav', $icon, $child);
+```
+***Sample Output:***
+```html
+	<ul class="nav nav_parent">
+		<li>
+			<a href="#someLink">
+				<div id="navElement1">
+					<i id="someThing" class="fa fa-cogs"></i>Settings
+				</div>
+			</a>
+		</li>
+		<li>
+			<ul class="nav nav_child">
+				<li>
+					<a href="#someLink">
+						<div id="navElement1">
+							<i id="someThing" class="fa fa-microchip"></i>Chip Settings
+						</div>
+					</a>
+				</li>
+			</ul>
+		</li>
+	</ul>
+```
