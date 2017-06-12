@@ -192,13 +192,19 @@ class Dropmenu {
     public function display($type, $set=array())
     {
         // Checking for icon settings
-        $this->iconSettings($set['icon']);
+        if (isset($set['icon'])) {
+            $this->iconSettings($set['icon']);
+        }
 
         // Checking for Child Settings
-        $this->childSettings($set['child']);
+        if (isset($set['child'])) {
+            $this->childSettings($set['child']);
+        }
 
         // Checking for Global Settings
-        $this->globalSettings($set['global']);
+        if (isset($set['global'])) {
+            $this->globalSettings($set['global']);
+        }
 
         if (Auth::check())
         {
