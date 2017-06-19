@@ -51,7 +51,7 @@ Add the below line in the `aliases` array:
 ### Generation
 You can generate migration to migrate the database. The migration will create a ***'menus'*** database following the structure requirements of `secrethash/dropmenu`. The command for creating the migration file is:
 ```haskell
-php artisan dropmenu:migrate
+php artisan dropmenu:migration
 ```
 ### Migrate
 The above command creates the migration file in `database\migrations` directory. From there you will need to migrate using the `migrate` command.
