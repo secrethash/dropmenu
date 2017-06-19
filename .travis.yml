@@ -12,7 +12,7 @@ before_install:
   - cp ./vendor/secrethash/dropmenu/tests/config/.env ./
   - rm ./config/app.php
   - cp ./vendor/secrethash/dropmenu/tests/config/app.php ./config
-  - php artisan vendor:publish
+  # - php artisan vendor:publish
   - mysql -e "create database IF NOT EXISTS test;" -uroot
   - php artisan dropmenu:migration
   - php artisan migrate
