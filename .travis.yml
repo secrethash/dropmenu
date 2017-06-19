@@ -9,7 +9,7 @@ before_install:
   - composer config repositories.secrethash vcs https://github.com/secrethash/dropmenu.git
   - composer require secrethash/dropmenu dev-master
   - composer update
-  - cp ./vendor/secrethash/dropmenu/tests/config/.env ./
+  # - cp ./vendor/secrethash/dropmenu/tests/config/.env ./
   - rm ./config/app.php
   - cp ./vendor/secrethash/dropmenu/tests/config/app.php ./config
   # - php artisan vendor:publish
