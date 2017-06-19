@@ -2,21 +2,30 @@ language: php
 php:
   - 5.5
   - 5.6
-before_install:
+before_script:
+  - phpenv config-rm xdebug.ini
   - composer self-update
   - composer create-project laravel/laravel
   - cd ./laravel
   - composer config repositories.secrethash vcs https://github.com/secrethash/dropmenu.git
   - composer require secrethash/dropmenu dev-master
   - composer update
+  - composer install --no-interaction
+  - php artisan key:generate
   # - cp ./vendor/secrethash/dropmenu/tests/config/.env ./
   - rm ./config/app.php
   - cp ./vendor/secrethash/dropmenu/tests/config/app.php ./config
   # - php artisan vendor:publish
-  - mysql -e "create database IF NOT EXISTS test;" -uroot
   - composer dump-autoload
   - php artisan dropmenu:migration
   - php artisan migrate
   - cd ./vendor/secrethash/dropmenu
-  
+before_install:
+  - mysql -e "CREATE DATABASE IF NOT EXISTS test;" -uroot
 script: "phpunit"
+services:
+  - mysql
+cache:
+  directories:
+    - node_modules
+    - vendor
