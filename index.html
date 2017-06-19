@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="None">
+  
+  <link rel="shortcut icon" href="./img/favicon.ico">
+  <title>Home - DropMenu Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="./css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="./css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="./css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Home";
+    var mkdocs_page_input_path = "index.md";
+    var mkdocs_page_url = "/";
+  </script>
+  
+  <script src="./js/jquery-2.1.1.min.js"></script>
+  <script src="./js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="./js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="." class="icon icon-home"> DropMenu Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1 current">
+		
+    <a class="current" href=".">Home</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l2"><a href="#dropmenu-drop-down-menu">DropMenu - Drop Down Menu</a></li>
+    
+
+    <li class="toctree-l2"><a href="#installation">Installation</a></li>
+    
+
+    <li class="toctree-l2"><a href="#configurations">Configurations</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#service-provider">Service Provider</a></li>
+        
+            <li><a class="toctree-l3" href="#facade">Facade</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#migration">Migration</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#generation">Generation</a></li>
+        
+            <li><a class="toctree-l3" href="#migrate">Migrate</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l2"><a href="#clearing-some-basics">Clearing Some Basics</a></li>
+    
+
+    <li class="toctree-l2"><a href="#displaying-the-menu">Displaying the Menu</a></li>
+    
+
+    <li class="toctree-l2"><a href="#settings-explained">Settings Explained</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l3" href="#available-options">Available Options</a></li>
+        
+            <li><a class="toctree-l3" href="#injecting">Injecting</a></li>
+        
+        </ul>
+    
+
+    </ul>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href=".">DropMenu Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Home</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="dropmenu-drop-down-menu">DropMenu - Drop Down Menu</h1>
+<p><a href="https://raw.githubusercontent.com/secrethash/dropmenu/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square" /></a> <a href="https://packagist.org/packages/secrethash/dropmenu"><img alt="Packagist" src="https://img.shields.io/packagist/dt/secrethash/dropmenu.svg?style=flat-square" /></a> <a href="https://packagist.org/packages/secrethash/dropmenu"><img alt="Packagist" src="https://img.shields.io/packagist/v/secrethash/dropmenu.svg?style=flat-square" /></a> <a href="https://packagist.org/packages/secrethash/dropmenu"><img alt="GitHub release" src="https://img.shields.io/github/release/secrethash/dropmenu.svg?style=flat-square" /></a></p>
+<p><strong><em>Socialize:</em></strong></p>
+<p><a href="https://twitter.com/secrethash"><img alt="Twitter Follow" src="https://img.shields.io/twitter/follow/secrethash.svg?style=social&amp;label=Follow&amp;style=flat-square" /></a> <a href="https://twitter.com/intent/tweet?text=Wow:&amp;url=%5Bobject%20Object%5D"><img alt="Twitter" src="https://img.shields.io/twitter/url/https/github.com/secrethash/dropmenu.svg?style=social&amp;style=flat-square" /></a></p>
+<p><strong>DropMenu</strong> is a Database driven, Dynamic Drop Down Menu Package for <strong><em>Laravel 5+</em></strong> . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.</p>
+<p>We are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)</p>
+<blockquote>
+<p><em>FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  <strong>FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.</strong>. I'll be glad to answer them.</em></p>
+</blockquote>
+<hr />
+<h1 id="installation">Installation</h1>
+<p>For a Stable Release:</p>
+<pre><code>composer require secrethash/dropmenu
+</code></pre>
+
+<p>For the Development Version:</p>
+<pre><code>composer require secrethash/dropmenu:dev-master
+</code></pre>
+
+<hr />
+<h1 id="configurations">Configurations</h1>
+<p>You will need to update you <code>config\app.php</code> file to make it work.</p>
+<h3 id="service-provider">Service Provider</h3>
+<p>Add the below line in your <code>providers</code> array</p>
+<pre><code class="php">        Secrethash\Dropmenu\DropmenuServiceProvider::class,
+</code></pre>
+
+<h3 id="facade">Facade</h3>
+<p>To access Dropmenu using <code>Dropmenu</code> facade instead of <code>Secrethash\Dropmenu</code>, you will need to update the <code>aliases</code> array.
+Add the below line in the <code>aliases</code> array:</p>
+<pre><code class="php">        'Dropmenu' =&gt; Secrethash\Dropmenu\DropmenuFacade::class,
+</code></pre>
+
+<hr />
+<h1 id="migration">Migration</h1>
+<h3 id="generation">Generation</h3>
+<p>You can generate migration to migrate the database. The migration will create a <strong><em>'menus'</em></strong> database following the structure requirements of <code>secrethash/dropmenu</code>. The command for creating the migration file is:</p>
+<pre><code class="haskell">php artisan dropmenu:migration
+</code></pre>
+
+<h3 id="migrate">Migrate</h3>
+<p>The above command creates the migration file in <code>database\migrations</code> directory. From there you will need to migrate using the <code>migrate</code> command.</p>
+<pre><code class="haskell">php artisan migrate
+</code></pre>
+
+<p>Once the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.</p>
+<hr />
+<p><strong>AGAIN:</strong></p>
+<blockquote>
+<p><em>FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  <strong>FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.</strong>. I'll be glad to answer them.</em></p>
+</blockquote>
+<h1 id="clearing-some-basics">Clearing Some Basics</h1>
+<p>Some basics needs to be cleared out before you work on/with this package.</p>
+<ul>
+<li>It Creates Bootstarp menus.</li>
+<li>Dynamic Drop Down Menus can be created using it.</li>
+<li>Database Table <code>menus</code>:<ul>
+<li><code>ID</code> The unique identifier.</li>
+<li><code>parent_id</code>It will be defined if a sub-menu is created. <code>ID</code> of the parent menu item will be the value here.</li>
+<li><code>name</code> Name to display.</li>
+<li><code>order_by</code> Comes handy when creating multiple menu items of same hierarchy level.</li>
+<li><code>link</code> Value supplied to the <code>&lt;a href=""&gt;</code> of the menu item.</li>
+<li><code>link_attr</code> Any extra Attributes of the Link. Like <code>target="_blank"</code>.</li>
+<li><code>icon</code> Icon Class Code supplied to the <code>&lt;i class=""&gt;</code>. If using font-awesome, use full class code that is to be provided in <code>&lt;i&gt;</code>, like <code>fa fa-code</code>.</li>
+<li><code>type</code> It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.</li>
+<li><code>auth</code>Authentication Level can be defined here. Here <code>1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="displaying-the-menu">Displaying the Menu</h1>
+<p>The menu can be displayed by using the following function:</p>
+<pre><code class="php">Dropmenu::display($type);
+</code></pre>
+
+<p>The <code>$type</code> is the value provided in the <code>type</code> column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.</p>
+<h1 id="settings-explained">Settings Explained</h1>
+<p>Settings are new to Dropmenu released after <code>1.5.0+</code>. Settings give an enhancement for customizing and supporting of the dropdown menu with maximum number of themes.</p>
+<blockquote>
+<p>Settings can be injected, if mandatory, using <code>Dropmenu::display($type, $iconSettingArray, $childSettingArray)</code>, the second and third parameters.</p>
+</blockquote>
+<h2 id="available-options">Available Options</h2>
+<h3 id="icon-settings">Icon Settings</h3>
+<p>These settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:
+- <strong><em>prefix</em></strong>: <em>Prefix is the starting element that are provided before the value of the <code>icon</code> table. By Default it is set to <code>&lt;i class='</code>. Further the HTML is completed by the </em>Suffix<em>. It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to: <code>&lt;div class="someThing"&gt;&lt;i class="</code>.</em>
+- <strong><em>suffix</em></strong>: <em>To complete the HTML Suffix should be provided. Following the above example, the suffix will be: <code>"&gt;&lt;/i&gt;</code>.</em>
+- <strong><em>line_end</em></strong>: <em>Following the example, Line End to play when you need to end the <code>&lt;/div&gt;</code> element after the Link text ends, else it can be left blank and the <code>div</code> can be ended in the suffix.</em></p>
+<h3 id="child-settings">Child Settings</h3>
+<p>Child Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example <code>class="" id=""</code>.
+- <strong><em>ul_attributes</em></strong></p>
+<h2 id="injecting">Injecting</h2>
+<p>Settings can be injected using the same <code>display()</code> function of <code>Dropmenu</code>.</p>
+<pre><code class="php">    // Icon Settings
+    $icon['prefix'] = '&lt;div id=&quot;navElement1&quot;&gt;&lt;i id=&quot;someThing&quot; class=&quot;';
+    $icon['suffix'] = '&quot;&gt;&lt;/i&gt;';
+    $icon['line_end'] = '&lt;/div&gt;';
+
+    // Child Settings
+    $child['ul_attributes'] = 'class=&quot;nav nav_child&quot;';
+
+    Dropmenu::display('admin:nav', $icon, $child);
+</code></pre>
+
+<p><strong><em>Sample Output:</em></strong></p>
+<pre><code class="html">    &lt;ul class=&quot;nav nav_parent&quot;&gt;
+        &lt;li&gt;
+            &lt;a href=&quot;#someLink&quot;&gt;
+                &lt;div id=&quot;navElement1&quot;&gt;
+                    &lt;i id=&quot;someThing&quot; class=&quot;fa fa-cogs&quot;&gt;&lt;/i&gt;Settings
+                &lt;/div&gt;
+            &lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+            &lt;ul class=&quot;nav nav_child&quot;&gt;
+                &lt;li&gt;
+                    &lt;a href=&quot;#someLink&quot;&gt;
+                        &lt;div id=&quot;navElement1&quot;&gt;
+                            &lt;i id=&quot;someThing&quot; class=&quot;fa fa-microchip&quot;&gt;&lt;/i&gt;Chip Settings
+                        &lt;/div&gt;
+                    &lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/li&gt;
+    &lt;/ul&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script src="./js/theme.js"></script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 0.16.3
+Build Date UTC : 2017-06-19 10:50:10
+-->

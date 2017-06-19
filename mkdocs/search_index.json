@@ -1,0 +1,84 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "DropMenu - Drop Down Menu\n\n\n \n \n \n\n\nSocialize:\n\n\n \n\n\nDropMenu\n is a Database driven, Dynamic Drop Down Menu Package for \nLaravel 5+\n . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.\n\n\nWe are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)\n\n\n\n\nFEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  \nFORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.\n. I'll be glad to answer them.\n\n\n\n\n\n\nInstallation\n\n\nFor a Stable Release:\n\n\ncomposer require secrethash/dropmenu\n\n\n\n\nFor the Development Version:\n\n\ncomposer require secrethash/dropmenu:dev-master\n\n\n\n\n\n\nConfigurations\n\n\nYou will need to update you \nconfig\\app.php\n file to make it work.\n\n\nService Provider\n\n\nAdd the below line in your \nproviders\n array\n\n\n        Secrethash\\Dropmenu\\DropmenuServiceProvider::class,\n\n\n\n\nFacade\n\n\nTo access Dropmenu using \nDropmenu\n facade instead of \nSecrethash\\Dropmenu\n, you will need to update the \naliases\n array.\nAdd the below line in the \naliases\n array:\n\n\n        'Dropmenu' => Secrethash\\Dropmenu\\DropmenuFacade::class,\n\n\n\n\n\n\nMigration\n\n\nGeneration\n\n\nYou can generate migration to migrate the database. The migration will create a \n'menus'\n database following the structure requirements of \nsecrethash/dropmenu\n. The command for creating the migration file is:\n\n\nphp artisan dropmenu:migration\n\n\n\n\nMigrate\n\n\nThe above command creates the migration file in \ndatabase\\migrations\n directory. From there you will need to migrate using the \nmigrate\n command.\n\n\nphp artisan migrate\n\n\n\n\nOnce the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.\n\n\n\n\nAGAIN:\n\n\n\n\nFEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  \nFORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.\n. I'll be glad to answer them.\n\n\n\n\nClearing Some Basics\n\n\nSome basics needs to be cleared out before you work on/with this package.\n\n\n\n\nIt Creates Bootstarp menus.\n\n\nDynamic Drop Down Menus can be created using it.\n\n\nDatabase Table \nmenus\n:\n\n\nID\n The unique identifier.\n\n\nparent_id\nIt will be defined if a sub-menu is created. \nID\n of the parent menu item will be the value here.\n\n\nname\n Name to display.\n\n\norder_by\n Comes handy when creating multiple menu items of same hierarchy level.\n\n\nlink\n Value supplied to the \n<a href=\"\">\n of the menu item.\n\n\nlink_attr\n Any extra Attributes of the Link. Like \ntarget=\"_blank\"\n.\n\n\nicon\n Icon Class Code supplied to the \n<i class=\"\">\n. If using font-awesome, use full class code that is to be provided in \n<i>\n, like \nfa fa-code\n.\n\n\ntype\n It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.\n\n\nauth\nAuthentication Level can be defined here. Here \n1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups\n\n\n\n\n\n\n\n\nDisplaying the Menu\n\n\nThe menu can be displayed by using the following function:\n\n\nDropmenu::display($type);\n\n\n\n\nThe \n$type\n is the value provided in the \ntype\n column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.\n\n\nSettings Explained\n\n\nSettings are new to Dropmenu released after \n1.5.0+\n. Settings give an enhancement for customizing and supporting of the dropdown menu with maximum number of themes.\n\n\n\n\nSettings can be injected, if mandatory, using \nDropmenu::display($type, $iconSettingArray, $childSettingArray)\n, the second and third parameters.\n\n\n\n\nAvailable Options\n\n\nIcon Settings\n\n\nThese settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:\n- \nprefix\n: \nPrefix is the starting element that are provided before the value of the \nicon\n table. By Default it is set to \n<i class='\n. Further the HTML is completed by the \nSuffix\n. It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to: \n<div class=\"someThing\"><i class=\"\n.\n\n- \nsuffix\n: \nTo complete the HTML Suffix should be provided. Following the above example, the suffix will be: \n\"></i>\n.\n\n- \nline_end\n: \nFollowing the example, Line End to play when you need to end the \n</div>\n element after the Link text ends, else it can be left blank and the \ndiv\n can be ended in the suffix.\n\n\nChild Settings\n\n\nChild Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example \nclass=\"\" id=\"\"\n.\n- \nul_attributes\n\n\nInjecting\n\n\nSettings can be injected using the same \ndisplay()\n function of \nDropmenu\n.\n\n\n    // Icon Settings\n    $icon['prefix'] = '<div id=\"navElement1\"><i id=\"someThing\" class=\"';\n    $icon['suffix'] = '\"></i>';\n    $icon['line_end'] = '</div>';\n\n    // Child Settings\n    $child['ul_attributes'] = 'class=\"nav nav_child\"';\n\n    Dropmenu::display('admin:nav', $icon, $child);\n\n\n\n\nSample Output:\n\n\n    <ul class=\"nav nav_parent\">\n        <li>\n            <a href=\"#someLink\">\n                <div id=\"navElement1\">\n                    <i id=\"someThing\" class=\"fa fa-cogs\"></i>Settings\n                </div>\n            </a>\n        </li>\n        <li>\n            <ul class=\"nav nav_child\">\n                <li>\n                    <a href=\"#someLink\">\n                        <div id=\"navElement1\">\n                            <i id=\"someThing\" class=\"fa fa-microchip\"></i>Chip Settings\n                        </div>\n                    </a>\n                </li>\n            </ul>\n        </li>\n    </ul>",
+            "title": "Home"
+        },
+        {
+            "location": "/#dropmenu-drop-down-menu",
+            "text": "Socialize:     DropMenu  is a Database driven, Dynamic Drop Down Menu Package for  Laravel 5+  . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.  We are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)   FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY   FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC. . I'll be glad to answer them.",
+            "title": "DropMenu - Drop Down Menu"
+        },
+        {
+            "location": "/#installation",
+            "text": "For a Stable Release:  composer require secrethash/dropmenu  For the Development Version:  composer require secrethash/dropmenu:dev-master",
+            "title": "Installation"
+        },
+        {
+            "location": "/#configurations",
+            "text": "You will need to update you  config\\app.php  file to make it work.",
+            "title": "Configurations"
+        },
+        {
+            "location": "/#service-provider",
+            "text": "Add the below line in your  providers  array          Secrethash\\Dropmenu\\DropmenuServiceProvider::class,",
+            "title": "Service Provider"
+        },
+        {
+            "location": "/#facade",
+            "text": "To access Dropmenu using  Dropmenu  facade instead of  Secrethash\\Dropmenu , you will need to update the  aliases  array.\nAdd the below line in the  aliases  array:          'Dropmenu' => Secrethash\\Dropmenu\\DropmenuFacade::class,",
+            "title": "Facade"
+        },
+        {
+            "location": "/#migration",
+            "text": "",
+            "title": "Migration"
+        },
+        {
+            "location": "/#generation",
+            "text": "You can generate migration to migrate the database. The migration will create a  'menus'  database following the structure requirements of  secrethash/dropmenu . The command for creating the migration file is:  php artisan dropmenu:migration",
+            "title": "Generation"
+        },
+        {
+            "location": "/#migrate",
+            "text": "The above command creates the migration file in  database\\migrations  directory. From there you will need to migrate using the  migrate  command.  php artisan migrate  Once the migration is completed, you are ready to seed your database with the menu data. Create menus and play around with it. Let me know if something goes wrong.   AGAIN:   FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY   FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC. . I'll be glad to answer them.",
+            "title": "Migrate"
+        },
+        {
+            "location": "/#clearing-some-basics",
+            "text": "Some basics needs to be cleared out before you work on/with this package.   It Creates Bootstarp menus.  Dynamic Drop Down Menus can be created using it.  Database Table  menus :  ID  The unique identifier.  parent_id It will be defined if a sub-menu is created.  ID  of the parent menu item will be the value here.  name  Name to display.  order_by  Comes handy when creating multiple menu items of same hierarchy level.  link  Value supplied to the  <a href=\"\">  of the menu item.  link_attr  Any extra Attributes of the Link. Like  target=\"_blank\" .  icon  Icon Class Code supplied to the  <i class=\"\"> . If using font-awesome, use full class code that is to be provided in  <i> , like  fa fa-code .  type  It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.  auth Authentication Level can be defined here. Here  1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups",
+            "title": "Clearing Some Basics"
+        },
+        {
+            "location": "/#displaying-the-menu",
+            "text": "The menu can be displayed by using the following function:  Dropmenu::display($type);  The  $type  is the value provided in the  type  column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.",
+            "title": "Displaying the Menu"
+        },
+        {
+            "location": "/#settings-explained",
+            "text": "Settings are new to Dropmenu released after  1.5.0+ . Settings give an enhancement for customizing and supporting of the dropdown menu with maximum number of themes.   Settings can be injected, if mandatory, using  Dropmenu::display($type, $iconSettingArray, $childSettingArray) , the second and third parameters.",
+            "title": "Settings Explained"
+        },
+        {
+            "location": "/#available-options",
+            "text": "",
+            "title": "Available Options"
+        },
+        {
+            "location": "/#icon-settings",
+            "text": "These settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:\n-  prefix :  Prefix is the starting element that are provided before the value of the  icon  table. By Default it is set to  <i class=' . Further the HTML is completed by the  Suffix . It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to:  <div class=\"someThing\"><i class=\" . \n-  suffix :  To complete the HTML Suffix should be provided. Following the above example, the suffix will be:  \"></i> . \n-  line_end :  Following the example, Line End to play when you need to end the  </div>  element after the Link text ends, else it can be left blank and the  div  can be ended in the suffix.",
+            "title": "Icon Settings"
+        },
+        {
+            "location": "/#child-settings",
+            "text": "Child Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example  class=\"\" id=\"\" .\n-  ul_attributes",
+            "title": "Child Settings"
+        },
+        {
+            "location": "/#injecting",
+            "text": "Settings can be injected using the same  display()  function of  Dropmenu .      // Icon Settings\n    $icon['prefix'] = '<div id=\"navElement1\"><i id=\"someThing\" class=\"';\n    $icon['suffix'] = '\"></i>';\n    $icon['line_end'] = '</div>';\n\n    // Child Settings\n    $child['ul_attributes'] = 'class=\"nav nav_child\"';\n\n    Dropmenu::display('admin:nav', $icon, $child);  Sample Output:      <ul class=\"nav nav_parent\">\n        <li>\n            <a href=\"#someLink\">\n                <div id=\"navElement1\">\n                    <i id=\"someThing\" class=\"fa fa-cogs\"></i>Settings\n                </div>\n            </a>\n        </li>\n        <li>\n            <ul class=\"nav nav_child\">\n                <li>\n                    <a href=\"#someLink\">\n                        <div id=\"navElement1\">\n                            <i id=\"someThing\" class=\"fa fa-microchip\"></i>Chip Settings\n                        </div>\n                    </a>\n                </li>\n            </ul>\n        </li>\n    </ul>",
+            "title": "Injecting"
+        }
+    ]
+}
