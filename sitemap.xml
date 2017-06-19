@@ -9,4 +9,36 @@
     </url>
     
 
+    
+    <url>
+     <loc>/install/</loc>
+     <lastmod>2017-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/basics/</loc>
+     <lastmod>2017-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/init/</loc>
+     <lastmod>2017-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+    <url>
+     <loc>/changelog/</loc>
+     <lastmod>2017-06-19</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>
