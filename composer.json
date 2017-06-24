@@ -11,9 +11,9 @@
     ],
     "require": {
         "secrethash/trickster": "^1.2",
-        "illuminate/console": "~5.0",
-        "illuminate/support": "~5.0",
-        "illuminate/cache": "~5.0"
+        "illuminate/console": "^5.0",
+        "illuminate/support": "^5.0",
+        "illuminate/cache": "^5.0"
     },
     "autoload": {
         "classmap": [
