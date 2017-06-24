@@ -16,13 +16,11 @@ class SecrethashDropmenuTables extends Migration
         Schema::create('menus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            $table->integer('parent_id');
-            $table->integer('order_by');
-            $table->char('link', 255);
-            $table->char('link_attr', 255);
-            $table->char('icon', 255);
-            $table->char('used_on', 255);
-            $table->boolean('ext');
+            $table->integer('parent_id')->nullable();
+            $table->integer('order_by')->nullable();
+            $table->char('link', 255)->nullable();
+            $table->char('link_attr', 255)->nullable();
+            $table->char('icon', 255)->nullable();
             $table->char('type', 255);
             $table->integer('viewable');
             $table->integer('auth');
