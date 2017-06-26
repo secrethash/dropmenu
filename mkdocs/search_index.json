@@ -2,13 +2,23 @@
     "docs": [
         {
             "location": "/",
-            "text": "Introduction\n\n\n \n \n \n\n\nSocialize:\n\n\n \n\n\nDropMenu\n is a Database driven, Dynamic Drop Down Menu Package for \nLaravel 5+\n . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.\n\n\nWe are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)\n\n\n\n\nNote\n\n\nFEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  \nFORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.\n. I'll be glad to answer them.",
+            "text": "About\n\n\nDropMenu\n is a Database driven, Dynamic Drop Down Menu Package for \nLaravel 5+\n . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.\n\n\nWe are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)\n\n\n\n\nNote\n\n\nFEEL FREE TO CONTRIBUTE TO THIS PROJECT BY  \nFORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC.\n. I'll be glad to answer them.\n\n\n\n\nApproach\n\n\nDropmenu\n follows a really very simple approach of using a single table to efficiently manage the Dropdown navigation menu. We thought as a developer it would be easy to manage a single table \nmenu\n to manage all your menus. Even when directly managing through the database applications like \nphpmyadmin\n, etc. one will not have to complicate things in order to understand the database structure.\n\n\nMade by keeping the developers in mind, all the complexities have been managed, and easily customizable menus can be generated.\n\n\nBadges\n\n\n \n \n \n\n\nSocialize:",
             "title": "Home"
         },
         {
-            "location": "/#introduction",
-            "text": "Socialize:     DropMenu  is a Database driven, Dynamic Drop Down Menu Package for  Laravel 5+  . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.  We are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)   Note  FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY   FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC. . I'll be glad to answer them.",
-            "title": "Introduction"
+            "location": "/#about",
+            "text": "DropMenu  is a Database driven, Dynamic Drop Down Menu Package for  Laravel 5+  . DropMenu is Currently under development so it would be greatful of you to co-operate with it. But as it's an opensource project you are free to contribute.  We are working on it constantly to make things right and get things on the right track. Bear with us just for some time. :)   Note  FEEL FREE TO CONTRIBUTE TO THIS PROJECT BY   FORKING, CREATING A PULL REQUEST, CREATING AN ISSUE, ETC. . I'll be glad to answer them.",
+            "title": "About"
+        },
+        {
+            "location": "/#approach",
+            "text": "Dropmenu  follows a really very simple approach of using a single table to efficiently manage the Dropdown navigation menu. We thought as a developer it would be easy to manage a single table  menu  to manage all your menus. Even when directly managing through the database applications like  phpmyadmin , etc. one will not have to complicate things in order to understand the database structure.  Made by keeping the developers in mind, all the complexities have been managed, and easily customizable menus can be generated.",
+            "title": "Approach"
+        },
+        {
+            "location": "/#badges",
+            "text": "Socialize:",
+            "title": "Badges"
         },
         {
             "location": "/install/",
@@ -52,12 +62,12 @@
         },
         {
             "location": "/basics/",
-            "text": "Clearing Some Basics\n\n\nSome basics needs to be cleared out before you work on/with this package.\n\n\n\n\nIt Creates Bootstarp menus.\n\n\nDynamic Drop Down Menus can be created using it.\n\n\nDatabase Table \nmenus\n:\n\n\nID\n The unique identifier.\n\n\nparent_id\nIt will be defined if a sub-menu is created. \nID\n of the parent menu item will be the value here.\n\n\nname\n Name to display.\n\n\norder_by\n Comes handy when creating multiple menu items of same hierarchy level.\n\n\nlink\n Value supplied to the \n<a href=\"\">\n of the menu item.\n\n\nlink_attr\n Any extra Attributes of the Link. Like \ntarget=\"_blank\"\n.\n\n\nicon\n Icon Class Code supplied to the \n<i class=\"\">\n. If using font-awesome, use full class code that is to be provided in \n<i>\n, like \nfa fa-code\n.\n\n\ntype\n It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.\n\n\nauth\nAuthentication Level can be defined here. Here \n1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups\n\n\n\n\n\n\n\n\nDisplaying the Menu\n\n\nThe menu can be displayed by using the following function:\n\n\n1\nDropmenu::display($type);\n\n\n\n\n\n\n\nThe \n$type\n is the value provided in the \ntype\n column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.",
+            "text": "Clearing Some Basics\n\n\nSome basics needs to be cleared out before you work on/with this package.\n\n\n\n\nIt Creates Bootstarp Supported menus.\n\n\nDynamic Drop Down Menus can be created using it.\n\n\nDatabase Table \nmenus\n:\n\n\nID\n The unique identifier.\n\n\nparent_id\n It will be defined if a sub-menu is created. \nID\n of the parent menu item will be the value here.\n\n\nname\n Name to display.\n\n\norder_by\n Comes handy when creating multiple menu items of same hierarchy level.\n\n\nlink\n Value supplied to the \n<a href=\"\">\n of the menu item.\n\n\nlink_attr\n Any extra Attributes of the Link. Like \ntarget=\"_blank\"\n.\n\n\nicon\n Icon Class Code supplied to the \n<i class=\"\">\n. If using font-awesome, use full class code that is to be provided in \n<i>\n, like \nfa fa-code\n.\n\n\ntype\n It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.\n\n\nauth\n Authentication Level can be defined here. Here \n1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups\n\n\n\n\n\n\n\n\nDisplaying the Menu\n\n\nThe menu can be displayed by using the following function:\n\n\n1\nDropmenu::display($type);\n\n\n\n\n\n\n\nThe \n$type\n is the value provided in the \ntype\n column in the database table. For Example: main:nav or sidebar or sidebar:nav or main:foot, etc.",
             "title": "Basics"
         },
         {
             "location": "/basics/#clearing-some-basics",
-            "text": "Some basics needs to be cleared out before you work on/with this package.   It Creates Bootstarp menus.  Dynamic Drop Down Menus can be created using it.  Database Table  menus :  ID  The unique identifier.  parent_id It will be defined if a sub-menu is created.  ID  of the parent menu item will be the value here.  name  Name to display.  order_by  Comes handy when creating multiple menu items of same hierarchy level.  link  Value supplied to the  <a href=\"\">  of the menu item.  link_attr  Any extra Attributes of the Link. Like  target=\"_blank\" .  icon  Icon Class Code supplied to the  <i class=\"\"> . If using font-awesome, use full class code that is to be provided in  <i> , like  fa fa-code .  type  It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.  auth Authentication Level can be defined here. Here  1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups",
+            "text": "Some basics needs to be cleared out before you work on/with this package.   It Creates Bootstarp Supported menus.  Dynamic Drop Down Menus can be created using it.  Database Table  menus :  ID  The unique identifier.  parent_id  It will be defined if a sub-menu is created.  ID  of the parent menu item will be the value here.  name  Name to display.  order_by  Comes handy when creating multiple menu items of same hierarchy level.  link  Value supplied to the  <a href=\"\">  of the menu item.  link_attr  Any extra Attributes of the Link. Like  target=\"_blank\" .  icon  Icon Class Code supplied to the  <i class=\"\"> . If using font-awesome, use full class code that is to be provided in  <i> , like  fa fa-code .  type  It is used to distinguish multiple menus. For example there is a Main nav menu and Sidebar Nav Menu. So different names can be alloted to both.  auth  Authentication Level can be defined here. Here  1=Authenticated Users Only, 2=Unauthenticated Users Only, 0=Both User Groups",
             "title": "Clearing Some Basics"
         },
         {
@@ -67,7 +77,7 @@
         },
         {
             "location": "/init/",
-            "text": "Note\n\n\nSettings can be injected, if mandatory, using \nDropmenu::display($type, $iconSettingArray, $childSettingArray)\n, the second and third parameters.\n\n\n\n\nAvailable Options\n\n\nIcon Settings\n\n\nThese settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:\n\n\n\n\n\n\nprefix\n: \nPrefix is the starting element that are provided before the value of the \nicon\n table. By Default it is set to \n<i class='\n. Further the HTML is completed by the \nSuffix\n. It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to: \n<div class=\"someThing\"><i class=\"\n.\n\n\n\n\n\n\nsuffix\n: \nTo complete the HTML Suffix should be provided. Following the above example, the suffix will be: \n\"></i>\n.\n\n\n\n\n\n\nline_end\n: \nFollowing the example, Line End to play when you need to end the \n</div>\n element after the Link text ends, else it can be left blank and the \ndiv\n can be ended in the suffix.\n\n\n\n\n\n\nChild Settings\n\n\nChild Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example \nclass=\"\" id=\"\"\n.\n\n\n\n\nul_attributes\n\n\n\n\n\n\nRelease Note\n\n\nGlobal settings has been released in \nv1.6.1 (CHANGELOG)\n\n\n\n\nGlobal settings gives the option of setting the basic configuration of the rendered menu.\n\n\n\n\nmethod:\n Method in the Global Settings give you an option to choose how the \nlink\n coloumn in the menu database is being treated.\n\n\nROUTE\n When the \nmethod\n is set to route, Dropmenu will treat the value provided in the \nlink\n coloumn of a menu item as a \nroute name\n. So the value will be passed to the \nroute()\n function to generate a url. This gives you the flexibility during development to update the url in the routes.php without any headace to update the database each and every time.\n\n\nURL\n The coloumn will be treated as a normal url.\n\n\n\n\n\n\n\n\nInjecting\n\n\nSettings can be injected using the same \ndisplay()\n function of \nDropmenu\n.\n\n\n\n\nWarning\n\n\nThe Settings injection has been cascaded in the version \nv1.6.1 (CHANGELOG)\n. The injection method has been changed.\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n    // Icon Settings\n\n\n    $settings['icon']['prefix'] = '<div id=\"navElement1\"><i id=\"someThing\" class=\"';\n\n\n    $settings['icon']['suffix'] = '\"></i>';\n\n\n    $settings['icon']['line_end'] = '</div>';\n\n\n\n    // Child Settings\n\n\n    $settings['child']['ul_attributes'] = 'class=\"nav nav_child\"';\n\n\n\n    // Global Settings\n\n\n    $settings['global']['method'] = \"ROUTE\"; # ROUTE or URL\n\n\n\n    Dropmenu::display('admin:nav', $settings);\n\n\n\n\n\n\n\nSample Output:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n    \n<\nul\n \nclass\n=\n\"nav nav_parent\"\n>\n\n        \n<\nli\n>\n\n            \n<\na\n \nhref\n=\n\"#someLink\"\n>\n\n                \n<\ndiv\n \nid\n=\n\"navElement1\"\n>\n\n                    \n<\ni\n \nid\n=\n\"someThing\"\n \nclass\n=\n\"fa fa-cogs\"\n></\ni\n>\nSettings\n                \n</\ndiv\n>\n\n            \n</\na\n>\n\n        \n</\nli\n>\n\n        \n<\nli\n>\n\n            \n<\nul\n \nclass\n=\n\"nav nav_child\"\n>\n\n                \n<\nli\n>\n\n                    \n<\na\n \nhref\n=\n\"#someLink\"\n>\n\n                        \n<\ndiv\n \nid\n=\n\"navElement1\"\n>\n\n                            \n<\ni\n \nid\n=\n\"someThing\"\n \nclass\n=\n\"fa fa-microchip\"\n></\ni\n>\nChip Settings\n                        \n</\ndiv\n>\n\n                    \n</\na\n>\n\n                \n</\nli\n>\n\n            \n</\nul\n>\n\n        \n</\nli\n>\n\n    \n</\nul\n>\n\n\n\n\n\n\n\n\n\nIMPORTANT\n\n\nUse the available route name set by:\n\n\n1\n    \nRoute\n::\nget\n(\n'some/where'\n,\n \n'SomeController@index'\n)\n-\n>\nname\n(\n'someName'\n);\n\n\n\n\n\n\n\nin the \nlink\n coloumn if the \nmethod\n is set to \nROUTES\n \nto avoid unnecessary errors",
+            "text": "Note\n\n\nSettings can be injected, if mandatory, using \nDropmenu::display($type, $settings)\n. It has been cascaded from \nv1.6.1 (CHANGELOG)\n\n\n\n\nAvailable Options\n\n\nIcon Settings\n\n\nThese settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:\n\n\n\n\n\n\nprefix\n: \nPrefix is the starting element that are provided before the value of the \nicon\n table. By Default it is set to \n<i class='\n. Further the HTML is completed by the \nSuffix\n. It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to: \n<div class=\"someThing\"><i class=\"\n.\n\n\n\n\n\n\nsuffix\n: \nTo complete the HTML Suffix should be provided. Following the above example, the suffix will be: \n\"></i>\n.\n\n\n\n\n\n\nline_end\n: \nFollowing the example, Line End plays a role when you need to end the \n</div>\n element after the Link text ends, else it can be left blank and the \ndiv\n can be ended in the suffix.\n\n\n\n\n\n\nChild Settings\n\n\nChild Settings are also \nnot\n mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example \nclass=\"\" id=\"\"\n.\n\n\n\n\nul_attributes\n\n\n\n\n\n\nRelease Note\n\n\nGlobal settings has been released in \nv1.6.1 (CHANGELOG)\n\n\n\n\nGlobal settings gives the option of setting the basic configuration of the rendered menu.\n\n\n\n\nmethod:\n Method in the Global Settings give you an option to choose how the \nlink\n coloumn in the menu database is being treated.\n\n\nROUTE\n When the \nmethod\n is set to route, Dropmenu will treat the value provided in the \nlink\n coloumn of a menu item as a \nroute name\n. So the value will be passed to the \nroute()\n function to generate a url. This gives you the flexibility during development to update the url in the routes.php without any headace to update the database each and every time.\n\n\nURL\n The coloumn will be treated as a normal url.\n\n\n\n\n\n\n\n\nInjecting\n\n\nSettings can be injected using the same \ndisplay()\n function of \nDropmenu\n.\n\n\n\n\nWarning\n\n\nThe Settings injection has been cascaded in the version \nv1.6.1 (CHANGELOG)\n. The injection method has been changed.\n\n\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n    // Icon Settings\n\n\n    $settings['icon']['prefix'] = '<div id=\"navElement1\"><i id=\"someThing\" class=\"';\n\n\n    $settings['icon']['suffix'] = '\"></i>';\n\n\n    $settings['icon']['line_end'] = '</div>';\n\n\n\n    // Child Settings\n\n\n    $settings['child']['ul_attributes'] = 'class=\"nav nav_child\"';\n\n\n\n    // Global Settings\n\n\n    $settings['global']['method'] = \"ROUTE\"; # ROUTE or URL\n\n\n\n    Dropmenu::display('admin:nav', $settings);\n\n\n\n\n\n\n\nSample Output:\n\n\n 1\n 2\n 3\n 4\n 5\n 6\n 7\n 8\n 9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n    \n<\nul\n \nclass\n=\n\"nav nav_parent\"\n>\n\n        \n<\nli\n>\n\n            \n<\na\n \nhref\n=\n\"#someLink\"\n>\n\n                \n<\ndiv\n \nid\n=\n\"navElement1\"\n>\n\n                    \n<\ni\n \nid\n=\n\"someThing\"\n \nclass\n=\n\"fa fa-cogs\"\n></\ni\n>\nSettings\n                \n</\ndiv\n>\n\n            \n</\na\n>\n\n        \n</\nli\n>\n\n        \n<\nli\n>\n\n            \n<\nul\n \nclass\n=\n\"nav nav_child\"\n>\n\n                \n<\nli\n>\n\n                    \n<\na\n \nhref\n=\n\"#someLink\"\n>\n\n                        \n<\ndiv\n \nid\n=\n\"navElement1\"\n>\n\n                            \n<\ni\n \nid\n=\n\"someThing\"\n \nclass\n=\n\"fa fa-microchip\"\n></\ni\n>\nChip Settings\n                        \n</\ndiv\n>\n\n                    \n</\na\n>\n\n                \n</\nli\n>\n\n            \n</\nul\n>\n\n        \n</\nli\n>\n\n    \n</\nul\n>\n\n\n\n\n\n\n\n\n\nIMPORTANT\n\n\nUse the available route name set by:\n\n\n1\n    \nRoute\n::\nget\n(\n'some/where'\n,\n \n'SomeController@index'\n)\n-\n>\nname\n(\n'someName'\n);\n\n\n\n\n\n\n\nin the \nlink\n coloumn if the \nmethod\n is set to \nROUTES\n \nto avoid unnecessary errors",
             "title": "Settings"
         },
         {
@@ -77,12 +87,12 @@
         },
         {
             "location": "/init/#icon-settings",
-            "text": "These settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:    prefix :  Prefix is the starting element that are provided before the value of the  icon  table. By Default it is set to  <i class=' . Further the HTML is completed by the  Suffix . It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to:  <div class=\"someThing\"><i class=\" .    suffix :  To complete the HTML Suffix should be provided. Following the above example, the suffix will be:  \"></i> .    line_end :  Following the example, Line End to play when you need to end the  </div>  element after the Link text ends, else it can be left blank and the  div  can be ended in the suffix.",
+            "text": "These settings are not mandatory by default. They give an extensive support for customizing the dropdown menu. The Icon Settings consits of three customizable attributes:    prefix :  Prefix is the starting element that are provided before the value of the  icon  table. By Default it is set to  <i class=' . Further the HTML is completed by the  Suffix . It comes in handy when you need to (for example) add a div element also for the navigation menu then you will set its value to:  <div class=\"someThing\"><i class=\" .    suffix :  To complete the HTML Suffix should be provided. Following the above example, the suffix will be:  \"></i> .    line_end :  Following the example, Line End plays a role when you need to end the  </div>  element after the Link text ends, else it can be left blank and the  div  can be ended in the suffix.",
             "title": "Icon Settings"
         },
         {
             "location": "/init/#child-settings",
-            "text": "Child Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example  class=\"\" id=\"\" .   ul_attributes    Release Note  Global settings has been released in  v1.6.1 (CHANGELOG)   Global settings gives the option of setting the basic configuration of the rendered menu.   method:  Method in the Global Settings give you an option to choose how the  link  coloumn in the menu database is being treated.  ROUTE  When the  method  is set to route, Dropmenu will treat the value provided in the  link  coloumn of a menu item as a  route name . So the value will be passed to the  route()  function to generate a url. This gives you the flexibility during development to update the url in the routes.php without any headace to update the database each and every time.  URL  The coloumn will be treated as a normal url.",
+            "text": "Child Settings are also  not  mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example  class=\"\" id=\"\" .   ul_attributes    Release Note  Global settings has been released in  v1.6.1 (CHANGELOG)   Global settings gives the option of setting the basic configuration of the rendered menu.   method:  Method in the Global Settings give you an option to choose how the  link  coloumn in the menu database is being treated.  ROUTE  When the  method  is set to route, Dropmenu will treat the value provided in the  link  coloumn of a menu item as a  route name . So the value will be passed to the  route()  function to generate a url. This gives you the flexibility during development to update the url in the routes.php without any headace to update the database each and every time.  URL  The coloumn will be treated as a normal url.",
             "title": "Child Settings"
         },
         {
@@ -92,7 +102,7 @@
         },
         {
             "location": "/changelog/",
-            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\n\n\nNote\n\n\n\n\nAll Dates are in \nYYYY-MM-DD\n format.\n\n\nThe Documentation for the Beta, Alpha, Pre-releases are not added. As soon as a \nbeta\n release becomes a \nstable\n release, the documentation will be updated\n\n\n\n\n\n\nThe format is based on \nKeep a Changelog\n\nand this project adheres to \nSemantic Versioning\n.\n\n\n[v1.6.1]\n\n\nAdded\n\n\n\n\nGlobal Settings Option\n\n\nROUTE\n or \nURL\n method selection for the rendered links from database.\n\n\n\n\n\n\nFull Documentation Released\n\n\nFull Changelog (based on \nkeepachangelog.com\n)\n\n\n\n\nChanged\n\n\n\n\nCascaded Settings Injection (made easy)\n\n\nSimplified and revamped Settings Injection\n\n\nImproved the code-readablity\n\n\nlink\n coloumn can be NULL.\n\n\nicon\n coloumn can be NULL.\n\n\nparent_id\n coloumn can be NULL.\n\n\nlink_attr\n coloumn can be NULL.\n\n\n\n\nFixed\n\n\n\n\nBUG:\n Unexpected \")\" error.\n\n\ncomposer.json dependency versions.\n\n\nnull value error for:\n\n\nicon\n Coloumn\n\n\nlink\n Coloumn\n\n\nlink_attr\n Coloumn\n\n\nparent_id\n Coloumn\n\n\n\n\n\n\n\n\n[v1.5.0] - 2017-06-10\n\n\nAdded\n\n\n\n\nSettings for Menu\n\n\nAdded ReadMe File\n\n\ncomposer.json\n Model Autoload\n\n\nConfiguration Documentation\n\n\nBadges\n\n\n\n\nFixed\n\n\n\n\nUpdated to support Laravel 5.4\n\n\nLanguage and Typos\n\n\nMenu\n Model\n\n\nRendering of Menu\n\n\nTrickster Error. Now using full Namespace.\n\n\nBlank menu arrising due to unknown function call\n\n\n\n\n\n\ncomposer.json\n \ndropmenu\n command Autoload\n\n\nMigration Command\n\n\n\n\nChanged\n\n\n\n\nRendering of Menu\n\n\nProtected unnecessary public functions\n\n\n\n\n\n\nWhole Code Structure (Formatted)\n\n\n\n\n[v1.1.0] - 2017-06-02\n\n\nAdded\n\n\n\n\nMigration Generator Command\n\n\nUniversal Migration Structure for Dropmenu\n\n\n\n\nChanged\n\n\n\n\nFrom Menu to Dropmenu\n\n\n\n\n[v1.0.5] - 2017-04-12\n\n\nAdded\n\n\n\n\nInitial Release\n\n\nFull Source Code",
+            "text": "Change Log\n\n\nAll notable changes to this project will be documented in this file.\n\n\n\n\nNote\n\n\n\n\nAll Dates are in \nYYYY-MM-DD\n format.\n\n\nThe Documentation for the Beta, Alpha, Pre-releases are not added. As soon as a \nbeta\n release becomes a \nstable\n release, the documentation will be updated\n\n\n\n\n\n\nThe format is based on \nKeep a Changelog\n\nand this project adheres to \nSemantic Versioning\n.\n\n\n[unreleased]\n\n\nAdded\n\n\n\n\nObject Oriented Approach\n\n\n\n\nChanged\n\n\n\n\nlink\n coloumn can be NULL.\n\n\nicon\n coloumn can be NULL.\n\n\nparent_id\n coloumn can be NULL.\n\n\nlink_attr\n coloumn can be NULL.\n\n\norder_by\n coloumn can be NULL.\n\n\n\n\nFixed\n\n\n\n\nnull value error for:\n\n\nicon\n Coloumn\n\n\nlink\n Coloumn\n\n\nlink_attr\n Coloumn\n\n\nparent_id\n Coloumn\n\n\norder_by\n Coloumn\n\n\n\n\n\n\n\n\nRemoved\n\n\n\n\next\n coloumn in the table \nmenu\n\n\nused_on\n coloumn in the table \nmenu\n\n\n\n\n[v1.6.1] - 2017-06-25\n\n\nAdded\n\n\n\n\nGlobal Settings Option\n\n\nROUTE\n or \nURL\n method selection for the rendered links from database.\n\n\n\n\n\n\nFull Documentation Released\n\n\nFull Changelog (based on \nkeepachangelog.com\n)\n\n\n\n\nChanged\n\n\n\n\nCascaded Settings Injection (made easy)\n\n\nSimplified and revamped Settings Injection\n\n\nImproved the code-readablity\n\n\n\n\nFixed\n\n\n\n\nBUG:\n Unexpected \")\" error.\n\n\ncomposer.json dependency versions.\n\n\n\n\n[v1.5.0] - 2017-06-10\n\n\nAdded\n\n\n\n\nSettings for Menu\n\n\nAdded ReadMe File\n\n\ncomposer.json\n Model Autoload\n\n\nConfiguration Documentation\n\n\nBadges\n\n\n\n\nFixed\n\n\n\n\nUpdated to support Laravel 5.4\n\n\nLanguage and Typos\n\n\nMenu\n Model\n\n\nRendering of Menu\n\n\nTrickster Error. Now using full Namespace.\n\n\nBlank menu arrising due to unknown function call\n\n\n\n\n\n\ncomposer.json\n \ndropmenu\n command Autoload\n\n\nMigration Command\n\n\n\n\nChanged\n\n\n\n\nRendering of Menu\n\n\nProtected unnecessary public functions\n\n\n\n\n\n\nWhole Code Structure (Formatted)\n\n\n\n\n[v1.1.0] - 2017-06-02\n\n\nAdded\n\n\n\n\nMigration Generator Command\n\n\nUniversal Migration Structure for Dropmenu\n\n\n\n\nChanged\n\n\n\n\nFrom Menu to Dropmenu\n\n\n\n\n[v1.0.5] - 2017-04-12\n\n\nAdded\n\n\n\n\nInitial Release\n\n\nFull Source Code",
             "title": "Changelog"
         },
         {
@@ -101,23 +111,48 @@
             "title": "Change Log"
         },
         {
-            "location": "/changelog/#v161",
+            "location": "/changelog/#unreleased",
             "text": "",
-            "title": "[v1.6.1]"
+            "title": "[unreleased]"
         },
         {
             "location": "/changelog/#added",
-            "text": "Global Settings Option  ROUTE  or  URL  method selection for the rendered links from database.    Full Documentation Released  Full Changelog (based on  keepachangelog.com )",
+            "text": "Object Oriented Approach",
             "title": "Added"
         },
         {
             "location": "/changelog/#changed",
-            "text": "Cascaded Settings Injection (made easy)  Simplified and revamped Settings Injection  Improved the code-readablity  link  coloumn can be NULL.  icon  coloumn can be NULL.  parent_id  coloumn can be NULL.  link_attr  coloumn can be NULL.",
+            "text": "link  coloumn can be NULL.  icon  coloumn can be NULL.  parent_id  coloumn can be NULL.  link_attr  coloumn can be NULL.  order_by  coloumn can be NULL.",
             "title": "Changed"
         },
         {
             "location": "/changelog/#fixed",
-            "text": "BUG:  Unexpected \")\" error.  composer.json dependency versions.  null value error for:  icon  Coloumn  link  Coloumn  link_attr  Coloumn  parent_id  Coloumn",
+            "text": "null value error for:  icon  Coloumn  link  Coloumn  link_attr  Coloumn  parent_id  Coloumn  order_by  Coloumn",
+            "title": "Fixed"
+        },
+        {
+            "location": "/changelog/#removed",
+            "text": "ext  coloumn in the table  menu  used_on  coloumn in the table  menu",
+            "title": "Removed"
+        },
+        {
+            "location": "/changelog/#v161-2017-06-25",
+            "text": "",
+            "title": "[v1.6.1] - 2017-06-25"
+        },
+        {
+            "location": "/changelog/#added_1",
+            "text": "Global Settings Option  ROUTE  or  URL  method selection for the rendered links from database.    Full Documentation Released  Full Changelog (based on  keepachangelog.com )",
+            "title": "Added"
+        },
+        {
+            "location": "/changelog/#changed_1",
+            "text": "Cascaded Settings Injection (made easy)  Simplified and revamped Settings Injection  Improved the code-readablity",
+            "title": "Changed"
+        },
+        {
+            "location": "/changelog/#fixed_1",
+            "text": "BUG:  Unexpected \")\" error.  composer.json dependency versions.",
             "title": "Fixed"
         },
         {
@@ -126,17 +161,17 @@
             "title": "[v1.5.0] - 2017-06-10"
         },
         {
-            "location": "/changelog/#added_1",
+            "location": "/changelog/#added_2",
             "text": "Settings for Menu  Added ReadMe File  composer.json  Model Autoload  Configuration Documentation  Badges",
             "title": "Added"
         },
         {
-            "location": "/changelog/#fixed_1",
+            "location": "/changelog/#fixed_2",
             "text": "Updated to support Laravel 5.4  Language and Typos  Menu  Model  Rendering of Menu  Trickster Error. Now using full Namespace.  Blank menu arrising due to unknown function call    composer.json   dropmenu  command Autoload  Migration Command",
             "title": "Fixed"
         },
         {
-            "location": "/changelog/#changed_1",
+            "location": "/changelog/#changed_2",
             "text": "Rendering of Menu  Protected unnecessary public functions    Whole Code Structure (Formatted)",
             "title": "Changed"
         },
@@ -146,12 +181,12 @@
             "title": "[v1.1.0] - 2017-06-02"
         },
         {
-            "location": "/changelog/#added_2",
+            "location": "/changelog/#added_3",
             "text": "Migration Generator Command  Universal Migration Structure for Dropmenu",
             "title": "Added"
         },
         {
-            "location": "/changelog/#changed_2",
+            "location": "/changelog/#changed_3",
             "text": "From Menu to Dropmenu",
             "title": "Changed"
         },
@@ -161,7 +196,7 @@
             "title": "[v1.0.5] - 2017-04-12"
         },
         {
-            "location": "/changelog/#added_3",
+            "location": "/changelog/#added_4",
             "text": "Initial Release  Full Source Code",
             "title": "Added"
         }

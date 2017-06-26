@@ -373,7 +373,7 @@
                 
                 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Settings can be injected, if mandatory, using <code>Dropmenu::display($type, $iconSettingArray, $childSettingArray)</code>, the second and third parameters.</p>
+<p>Settings can be injected, if mandatory, using <code>Dropmenu::display($type, $settings)</code>. It has been cascaded from <a href="https://secrethash.github.io/dropmenu/changelog#v161">v1.6.1 (CHANGELOG)</a></p>
 </div>
 <h2 id="available-options">Available Options</h2>
 <h3 id="icon-settings">Icon Settings</h3>
@@ -386,11 +386,11 @@
 <p><strong><em>suffix</em></strong>: <em>To complete the HTML Suffix should be provided. Following the above example, the suffix will be: <code>"&gt;&lt;/i&gt;</code>.</em></p>
 </li>
 <li>
-<p><strong><em>line_end</em></strong>: <em>Following the example, Line End to play when you need to end the <code>&lt;/div&gt;</code> element after the Link text ends, else it can be left blank and the <code>div</code> can be ended in the suffix.</em></p>
+<p><strong><em>line_end</em></strong>: <em>Following the example, Line End plays a role when you need to end the <code>&lt;/div&gt;</code> element after the Link text ends, else it can be left blank and the <code>div</code> can be ended in the suffix.</em></p>
 </li>
 </ul>
 <h3 id="child-settings">Child Settings</h3>
-<p>Child Settings are also not mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example <code>class="" id=""</code>.</p>
+<p>Child Settings are also <strong>not</strong> mandatory to be set. It's an extensive support option as some themes have different classes for their child menu for different styling. Child Settings currently only have an option to set Unordered List Attributes, for example <code>class="" id=""</code>.</p>
 <ul>
 <li><strong><em>ul_attributes</em></strong></li>
 </ul>
