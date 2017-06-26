@@ -10,12 +10,12 @@ use Secrethash\Trickster;
 class Dropmenu {
 
     /**
-    # Displays the menus provided
-    # by the name and using the 
-    # settings that are provided.
-    # 
-    # Created by: Shashwat Mishra <secrethash96@gmail.com>
-    # License: MIT (Given that Credits should be given)
+    *# Displays the menus provided
+    *# by the name and using the 
+    *# settings that are provided.
+    *# 
+    *# Created by: Shashwat Mishra <secrethash96@gmail.com>
+    *# License: MIT (Given that Credits should be given)
     */
 
     /**
