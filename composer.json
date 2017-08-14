@@ -10,10 +10,13 @@
         }
     ],
     "require": {
-        "secrethash/trickster": "^1.2",
         "illuminate/console": "^5.0",
         "illuminate/support": "^5.0",
         "illuminate/cache": "^5.0"
+    },
+    "suggest":{
+        "secrethash/trickster": "^1.2",
+        "secrethash/smsg": "^1.1.3"
     },
     "autoload": {
         "classmap": [
