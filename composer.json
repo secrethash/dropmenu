@@ -26,5 +26,15 @@
         "psr-4": {
             "Secrethash\\Dropmenu\\": "src/"
         }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Secrethash\\Dropmenu\\DropmenuServiceProvider"
+            ],
+            "aliases": {
+                "Dropmenu": "Secrethash\\Dropmenu\\Facade\\DropmenuFacade"
+            }
+        }
     }
 }
