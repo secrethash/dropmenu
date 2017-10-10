@@ -34,7 +34,7 @@ class MigrationCommand extends Command
      *
      * @return void
      */
-    public function fire()
+    public function handle()
     {
         $this->laravel->view->addNamespace('dropmenu', substr(__DIR__, 0, -8).'views');
 
