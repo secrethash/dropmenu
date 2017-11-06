@@ -33,7 +33,7 @@
                 "Secrethash\\Dropmenu\\DropmenuServiceProvider"
             ],
             "aliases": {
-                "Dropmenu": "Secrethash\\Dropmenu\\Facade\\DropmenuFacade"
+                "Dropmenu": "Secrethash\\Dropmenu\\DropmenuFacade"
             }
         }
     }

@@ -1,11 +1,13 @@
-<?php namespace Secrethash\Dropmenu;
+<?php
+
+namespace Secrethash\Dropmenu;
 
 /**
- * This file is part of Entrust,
- * a role & permission management solution for Laravel.
+ * This file is part of Dropmenu,
+ * a simple Dynamic Dropdown Menu Generator
  *
  * @license MIT
- * @package Zizaco\Entrust
+ * @package Secrethash/Dropmenu
  */
 
 use Illuminate\Support\Facades\Facade;
